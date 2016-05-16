@@ -10,7 +10,7 @@ int main() {
     int cp = 0;
 	int flag = 0;
 
-    arquivo = fopen("fatorial4.c", "r");
+    arquivo = fopen("fatorial3.c", "r");
 
     c = getc(arquivo);
     while( c != -1 )

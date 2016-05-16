@@ -8,6 +8,7 @@ int main() {
     int cl = 0;
     int cb = 0;
     int cp = 0;
+	int flag = 0;
 
     arquivo = fopen("fatorial.c", "r");
 
@@ -17,10 +18,16 @@ int main() {
         cb++;
         if (c == '\n')
             cl = cl + 1;
-        if (c == ' ')
-            cp = cp + 1;
+        if ((c == ' ')||(c == '\n')||(c ==';')||(c ==',')){
+			if (flag == 0){
+	            cp = cp + 1;
+				flag = 1;
+			}
+		}else{
+			flag = 0;		
+		}
 
-        printf("%i %c %x\n", c, c, c);
+        /*printf("%i %c %x\n", c, c, c);*/
         c = getc(arquivo);
     }
 

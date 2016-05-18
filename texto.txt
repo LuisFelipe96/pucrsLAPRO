@@ -1,0 +1,3 @@
+testa conta palavra
+testando o contador
+teste teste;teste"teste"(teste)#teste%teste<teste=teste>teste.teste{teste}teste,teste&teste*teste/teste\teste@teste/*teste*/		teste

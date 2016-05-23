@@ -7,23 +7,25 @@ int main() {
     int menor = 0;
     int n1;
     int n2;
-    printf("digite o nome do arquivo");
-    scanf("%s",&nome);
+	int aux;
+    printf("digite o nome do arquivo: ");
+    scanf("%s",nome);
     arquivo = fopen(nome, "r");
-    while( !feof(arquivo) )
+    while(!feof(arquivo))
     {
-        if (fscanf(arquivo,"%d %d",&n1,&n2)){
+		aux=fscanf(arquivo,"%d %d",&n1,&n2);
+        if (aux>0){
             if (n1>n2){
                 printf("%d\n",n1);
                 menor=n2+menor;
             }else{
-                printf("%d\n",n2);
+				printf("%d\n",n2);				
                 menor=n1+menor;
             }
         }
 	}
 
-    printf("some dos menores valores: %d\n", menor);
+    printf("soma dos menores valores: %d\n", menor);
     fclose(arquivo);
     return 0;
 }

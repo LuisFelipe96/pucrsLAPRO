@@ -8,7 +8,7 @@ int main() {
     int cl = 0;
     int cb = 0;
     int cp = 0;
-    int flag = 0;
+    int flag = 1;
 
     arquivo = fopen("fatorial.c", "r");
 
